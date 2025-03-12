@@ -8,7 +8,7 @@ const openMongoConnection = () => {
     db.once('open', function callback () {
         console.log("connected to MongoDB");
     });
-    mongoose.connect('mongodb+srv://<pipatea_username>:<Zenobia32_password>@1605.m9ot9.mongodb.net/?retryWrites=true&w=majority&appName=1605');
+    mongoose.connect(process.env.mongo_uri);
 };
 
 mongoose.set('strictQuery', true)
